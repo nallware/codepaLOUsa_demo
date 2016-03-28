@@ -1,0 +1,1261 @@
+touch to create a file
+git add .  (everything
+
+git add -p
+git add -i
+
+git log --graph
+git log --oneline
+git show (hash)
+
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (ma                               ster)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (ma                               ster)
+$ git branch
+* master
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (ma                               ster)
+$ git branch branch-1
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (ma                               ster)
+$ get branch
+bash: get: command not found
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (ma                               ster)
+$ git branch
+  branch-1
+* master
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (ma                               ster)
+$ git branch branch-2
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (ma                               ster)
+$ git log --oneline
+3d64128 message
+46971c6 remove file
+923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (ma                               ster)
+$ git log --oneline branch-1
+3d64128 message
+46971c6 remove file
+923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (ma                               ster)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ get log --oneline branch2
+bash: get: command not found
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git log--oneline branch2
+git: 'log--oneline' is not a git command. See 'git --help'.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git log --oneline branch2
+fatal: ambiguous argument 'branch2': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git log --oneline branch-2
+3d64128 message
+46971c6 remove file
+923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git checkout branch-1
+Switched to branch 'branch-1'
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-1)
+$ git branch
+* branch-1
+  branch-2
+  master
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-1)
+$ get log --oneline
+bash: get: command not found
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-1)
+$ git log --oneline
+3d64128 message
+46971c6 remove file
+923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-1)
+$ git checkout -b branch-3
+Switched to a new branch 'branch-3'
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git branch
+  branch-1
+  branch-2
+* branch-3
+  master
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ touch branch-file.txt
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git status
+On branch branch-3
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        branch-file.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git add .
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git status
+On branch branch-3
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   branch-file.txt
+
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git commit -m 'commit file on branch-3'
+[branch-3 7405faf] commit file on branch-3
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 branch-file.txt
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$
+
+
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git commit -m 'commit file on branch-3'
+[branch-3 7405faf] commit file on branch-3
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 branch-file.txt
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git status
+On branch branch-3
+nothing to commit, working directory clean
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git log --graph --oneline --decorate --all
+* 7405faf (HEAD -> branch-3) commit file on branch-3
+* 3d64128 (master, branch-2, branch-1) message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git checkout master
+Switched to branch 'master'
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ get log --oneline
+bash: get: command not found
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git log --online
+fatal: unrecognized argument: --online
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git log --graph --oneline --decorate --all
+* 7405faf (branch-3) commit file on branch-3
+* 3d64128 (HEAD -> master, branch-2, branch-1) message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git merge branch-3
+Updating 3d64128..7405faf
+Fast-forward
+ branch-file.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 branch-file.txt
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git log --graph --oneline --decorate --all
+* 7405faf (HEAD -> master, branch-3) commit file on branch-3
+* 3d64128 (branch-2, branch-1) message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+
+
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git config --global alias.lola 'log --graph --oneline --decorate --all'
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git lola
+* 7405faf (HEAD -> master, branch-3) commit file on branch-3
+* 3d64128 (branch-2, branch-1) message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+
+
+
+* 7405faf (HEAD -> branch-3) commit file on branch-3
+* 3d64128 (master, branch-2, branch-1) message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git checkout master
+Switched to branch 'master'
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ get log --oneline
+bash: get: command not found
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git log --online
+fatal: unrecognized argument: --online
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git log --graph --oneline --decorate --all
+* 7405faf (branch-3) commit file on branch-3
+* 3d64128 (HEAD -> master, branch-2, branch-1) message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git merge branch-3
+Updating 3d64128..7405faf
+Fast-forward
+ branch-file.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 branch-file.txt
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git log --graph --oneline --decorate --all
+* 7405faf (HEAD -> master, branch-3) commit file on branch-3
+* 3d64128 (branch-2, branch-1) message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ clear
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git config --global alias.lola 'log --graph --oneline --decorate --all'
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git lola
+* 7405faf (HEAD -> master, branch-3) commit file on branch-3
+* 3d64128 (branch-2, branch-1) message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git branch
+  branch-1
+  branch-2
+  branch-3
+* master
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git add -p
+diff --git a/file-a.txt b/file-a.txt
+index 6cc3bfa..1fe170a 100644
+--- a/file-a.txt
++++ b/file-a.txt
+@@ -1 +1 @@
+-first line
+\ No newline at end of file
++first line on master
+\ No newline at end of file
+Stage this hunk [y,n,q,a,d,/,e,?]? y
+
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   file-a.txt
+
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ notepad file-a.txt
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   file-a.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   file-a.txt
+
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git commit -m 'not using vi again...ever.  use notepad command'
+[master 8ffd74a] not using vi again...ever.  use notepad command
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   file-a.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git commit -m 'change shared file on master'
+On branch master
+Changes not staged for commit:
+        modified:   file-a.txt
+
+no changes added to commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   file-a.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git commit -m 'change file on master'
+On branch master
+Changes not staged for commit:
+        modified:   file-a.txt
+
+no changes added to commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git commit
+On branch master
+Changes not staged for commit:
+        modified:   file-a.txt
+
+no changes added to commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git commit -m 'added master'
+On branch master
+Changes not staged for commit:
+        modified:   file-a.txt
+
+no changes added to commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ status
+bash: status: command not found
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   file-a.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git branch branch-3
+fatal: A branch named 'branch-3' already exists.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   file-a.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ lola
+bash: lola: command not found
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git lola
+* 8ffd74a (HEAD -> master) not using vi again...ever.  use notepad command
+* 7405faf (branch-3) commit file on branch-3
+* 3d64128 (branch-2, branch-1) message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ notepad file-a.txt
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   file-a.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git add .
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git branch
+  branch-1
+  branch-2
+  branch-3
+* master
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git add .
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git commit -m 'stuff'
+[master b622539] stuff
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git branch branch-3
+fatal: A branch named 'branch-3' already exists.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git commit -m 'changes'
+On branch master
+nothing to commit, working directory clean
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git lola
+* b622539 (HEAD -> master) stuff
+* 8ffd74a not using vi again...ever.  use notepad command
+* 7405faf (branch-3) commit file on branch-3
+* 3d64128 (branch-2, branch-1) message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git checkout master
+Already on 'master'
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git lola
+* b622539 (HEAD -> master) stuff
+* 8ffd74a not using vi again...ever.  use notepad command
+* 7405faf (branch-3) commit file on branch-3
+* 3d64128 (branch-2, branch-1) message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ cat branch-file.txt
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ cat file-a.txt
+first line on master
+another line
+
+changes on branch-3
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ branch merge branch-3
+bash: branch: command not found
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git merge branch-3
+Already up-to-date.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git checkout branch-3
+Switched to branch 'branch-3'
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git merge master
+Updating 7405faf..b622539
+Fast-forward
+ file-a.txt | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git branch
+  branch-1
+  branch-2
+* branch-3
+  master
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git branch master
+fatal: A branch named 'master' already exists.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git checkout master
+Switched to branch 'master'
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git branch branch-3
+fatal: A branch named 'branch-3' already exists.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git merge branch-3
+Already up-to-date.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git lola
+* b622539 (HEAD -> master, branch-3) stuff
+* 8ffd74a not using vi again...ever.  use notepad command
+* 7405faf commit file on branch-3
+* 3d64128 (branch-2, branch-1) message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ notepad file-b.txt
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git add .
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git merge -m 'commit on master'
+fatal: No remote for the current branch.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git branch
+  branch-1
+  branch-2
+  branch-3
+* master
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ status
+bash: status: command not found
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ notepad rebase.txt
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git add .
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   file-b.txt
+        new file:   rebase.txt
+
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git commit -m 'commit rebase file on master'
+[master 2c0c2d5] commit rebase file on master
+ 2 files changed, 1 insertion(+)
+ create mode 100644 rebase.txt
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git lola
+* 2c0c2d5 (HEAD -> master) commit rebase file on master
+* b622539 (branch-3) stuff
+* 8ffd74a not using vi again...ever.  use notepad command
+* 7405faf commit file on branch-3
+* 3d64128 (branch-2, branch-1) message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git checkout branch-3
+Switched to branch 'branch-3'
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git lola
+* 2c0c2d5 (master) commit rebase file on master
+* b622539 (HEAD -> branch-3) stuff
+* 8ffd74a not using vi again...ever.  use notepad command
+* 7405faf commit file on branch-3
+* 3d64128 (branch-2, branch-1) message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git rebase master
+First, rewinding head to replay your work on top of it...
+Fast-forwarded branch-3 to master.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git lola
+* 2c0c2d5 (HEAD -> branch-3, master) commit rebase file on master
+* b622539 stuff
+* 8ffd74a not using vi again...ever.  use notepad command
+* 7405faf commit file on branch-3
+* 3d64128 (branch-2, branch-1) message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ notepad rebase.txt
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git commit -am 'change rebase file on branch-3'
+[branch-3 f6e5f0a] change rebase file on branch-3
+ 1 file changed, 1 insertion(+)
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git status
+On branch branch-3
+nothing to commit, working directory clean
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ branch master
+bash: branch: command not found
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git branch master
+fatal: A branch named 'master' already exists.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-3)
+$ git checkout master
+Switched to branch 'master'
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ notepad file-b.txt
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   file-b.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git merge .
+merge: . - not something we can merge
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git merge -m 'some stuff possible conflict?'
+fatal: No remote for the current branch.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   file-b.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git add .
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git merge -m 'possible conflict?'
+fatal: No remote for the current branch.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   file-b.txt
+
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git merge -am 'conflict'
+error: unknown switch `a'
+usage: git merge [<options>] [<commit>...]
+   or: git merge [<options>] <msg> HEAD <commit>
+   or: git merge --abort
+
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --summary             (synonym to --stat)
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    -e, --edit            edit message before committing
+    --ff                  allow fast-forward (default)
+    --ff-only             abort if fast-forward is not possible
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --verify-signatures   Verify that the named commit has a valid GPG signature
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -m, --message <message>
+                          merge commit message (for a non-fast-forward merge)
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --abort               abort the current in-progress merge
+    --progress            force progress reporting
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --overwrite-ignore    update ignored files (default)
+
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git checkout master
+M       file-b.txt
+Already on 'master'
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git lola
+* f6e5f0a (branch-3) change rebase file on branch-3
+* 2c0c2d5 (HEAD -> master) commit rebase file on master
+* b622539 stuff
+* 8ffd74a not using vi again...ever.  use notepad command
+* 7405faf commit file on branch-3
+* 3d64128 (branch-2, branch-1) message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git merge  branch-3
+Updating 2c0c2d5..f6e5f0a
+Fast-forward
+ rebase.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git checkout branch-2
+error: Your local changes to the following files would be overwritten by checkout:
+        file-b.txt
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git lola
+* f6e5f0a (HEAD -> master, branch-3) change rebase file on branch-3
+* 2c0c2d5 commit rebase file on master
+* b622539 stuff
+* 8ffd74a not using vi again...ever.  use notepad command
+* 7405faf commit file on branch-3
+* 3d64128 (branch-2, branch-1) message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git branch
+  branch-1
+  branch-2
+  branch-3
+* master
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git checkout branch-2
+error: Your local changes to the following files would be overwritten by checkout:
+        file-b.txt
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git commit -m 'stuff'
+[master 659f4b7] stuff
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git checkout branch-2
+Switched to branch 'branch-2'
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-2)
+$ rebase master
+master: skipped because nonexistent.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-2)
+$ git rebase master
+First, rewinding head to replay your work on top of it...
+Fast-forwarded branch-2 to master.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-2)
+$ git status
+On branch branch-2
+nothing to commit, working directory clean
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-2)
+$ git status
+On branch branch-2
+nothing to commit, working directory clean
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-2)
+$ touch cherry-1.txt
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-2)
+$ git status
+On branch branch-2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        cherry-1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-2)
+$ git add .
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-2)
+$ git commit -m 'first cherry file'
+[branch-2 00c6c21] first cherry file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 cherry-1.txt
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-2)
+$ git status
+On branch branch-2
+nothing to commit, working directory clean
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-2)
+$ git lola
+* 00c6c21 (HEAD -> branch-2) first cherry file
+* 659f4b7 (master) stuff
+* f6e5f0a (branch-3) change rebase file on branch-3
+* 2c0c2d5 commit rebase file on master
+* b622539 stuff
+* 8ffd74a not using vi again...ever.  use notepad command
+* 7405faf commit file on branch-3
+* 3d64128 (branch-1) message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (branch-2)
+$ git checkout master
+Switched to branch 'master'
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git lola
+* 00c6c21 (branch-2) first cherry file
+* 659f4b7 (HEAD -> master) stuff
+* f6e5f0a (branch-3) change rebase file on branch-3
+* 2c0c2d5 commit rebase file on master
+* b622539 stuff
+* 8ffd74a not using vi again...ever.  use notepad command
+* 7405faf commit file on branch-3
+* 3d64128 (branch-1) message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$
+
+
+
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ status
+bash: status: command not found
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ clear
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ mkdir empty
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$
+
+
+
+
+
+
+
+f910dec HEAD@{9}: commit: added empty dir
+d074d4e HEAD@{10}: cherry-pick: first cherry file
+659f4b7 HEAD@{11}: checkout: moving from branch-2 to master
+00c6c21 HEAD@{12}: commit: first cherry file
+659f4b7 HEAD@{13}: rebase finished: returning to refs/heads/branch-2
+659f4b7 HEAD@{14}: rebase: checkout master
+3d64128 HEAD@{15}: checkout: moving from master to branch-2
+659f4b7 HEAD@{16}: commit: stuff
+f6e5f0a HEAD@{17}: merge branch-3: Fast-forward
+2c0c2d5 HEAD@{18}: checkout: moving from master to master
+2c0c2d5 HEAD@{19}: checkout: moving from branch-3 to master
+f6e5f0a HEAD@{20}: commit: change rebase file on branch-3
+2c0c2d5 HEAD@{21}: rebase finished: returning to refs/heads/branch-3
+2c0c2d5 HEAD@{22}: rebase: checkout master
+ui
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ quit
+bash: quit: command not found
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ clear
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git remote add origin https://github.com/nallware/codepaLOUsa_demo.git
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git push -u origin master
+fatal: unable to access 'https://github.com/nallware/codepaLOUsa_demo.git/': Failed to connect to github.com port 443: Timed out
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git push -u origin master
+error: unable to read askpass response from 'C:/Program Files/Git/mingw64/libexec/git-core/git-gui--askpass'
+Username for 'https://github.com': nallware
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/nallware/codepaLOUsa_demo.git/'
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git remote add origin https://github.com/nallware/codepaLOUsa_demo.git
+fatal: remote origin already exists.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git push -u origin master
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/nallware/codepaLOUsa_demo.git/'
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git push -u origin master
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/nallware/codepaLOUsa_demo.git/'
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git push -u origin master
+Counting objects: 32, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (24/24), done.
+Writing objects: 100% (32/32), 2.79 KiB | 0 bytes/s, done.
+Total 32 (delta 9), reused 0 (delta 0)
+To https://github.com/nallware/codepaLOUsa_demo.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git lola
+* f910dec (HEAD -> master, origin/master) added empty dir
+* d074d4e (branch-1) first cherry file
+* 659f4b7 stuff
+* f6e5f0a change rebase file on branch-3
+* 2c0c2d5 commit rebase file on master
+* b622539 stuff
+* 8ffd74a not using vi again...ever.  use notepad command
+* 7405faf commit file on branch-3
+* 3d64128 message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ get fetch origin
+bash: get: command not found
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git fetch
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git merge origin/master
+Already up-to-date.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git fetch
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/nallware/codepaLOUsa_demo
+   f910dec..fd34c87  master     -> origin/master
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+nothing to commit, working directory clean
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git commit -m 'dunno'
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+nothing to commit, working directory clean
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ get pull origin
+bash: get: command not found
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git pull origin
+Updating f910dec..fd34c87
+Fast-forward
+ testremote.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 testremote.txt
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git lola
+* fd34c87 (HEAD -> master, origin/master) remote file test
+* f910dec added empty dir
+* d074d4e (branch-1) first cherry file
+* 659f4b7 stuff
+* f6e5f0a change rebase file on branch-3
+* 2c0c2d5 commit rebase file on master
+* b622539 stuff
+* 8ffd74a not using vi again...ever.  use notepad command
+* 7405faf commit file on branch-3
+* 3d64128 message
+* 46971c6 remove file
+* 923049a first commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ ls
+branch-file.txt  empty/      file-b.txt  testremote.txt
+cherry-1.txt     file-a.txt  rebase.txt  tmp.log
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git pull
+Already up-to-date.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git merge
+Already up-to-date.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ get pull origin master
+bash: get: command not found
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git pull origin master
+From https://github.com/nallware/codepaLOUsa_demo
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git commit -m 'trying to get from remote'
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git pull
+Already up-to-date.
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ ls
+branch-file.txt  empty/      file-b.txt  testremote.txt
+cherry-1.txt     file-a.txt  rebase.txt  tmp.log
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ notepad testremote.txt
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   testremote.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git commit -m 'added text to testremote.txt'
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+        modified:   testremote.txt
+
+no changes added to commit
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git push
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/nallware/codepaLOUsa_demo.git/'
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git push
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/nallware/codepaLOUsa_demo.git/'
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git push
+Everything up-to-date
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   testremote.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git add .
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   testremote.txt
+
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git push
+Everything up-to-date
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ status
+bash: status: command not found
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   testremote.txt
+
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git commit -m 'adding text to remote file'
+[master d859c07] adding text to remote file
+ 1 file changed, 1 insertion(+)
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 314 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://github.com/nallware/codepaLOUsa_demo.git
+   fd34c87..d859c07  master -> master
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+knall@LOUTABIT003 MINGW64 ~/Documents/_GIT_PROJECTS/_codeapaLOUsa/first-repo (master)
+$
+
+
+
+
+
